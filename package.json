@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "next-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/markdown-it": "^13.0.7",
+    "vitepress": "1.0.0-rc.32"
+  },
+  "dependencies": {
+    "vue": "^3.3.13"
+  }
+}
