@@ -4,6 +4,7 @@ export default defineConfig({
     // ...
     title:'longan的个人博客',
     description:"前端,web前端，vue,React,小程序，H5,taro,antd,ant design,docker,shell,linux",
+
     themeConfig:{
         nav:[
             {
@@ -11,9 +12,19 @@ export default defineConfig({
                 activeMatch:`^/(js|css|html)/`,
                 items:[
                     {text:'js基础',link:'/js/this'},
-                    {text:'js设计模式',link:'/js/design/single'}
+                    {text:'js设计模式',link:'/js/design/single'},
+                    {text:'问题总结',link:'/js/qa/canvas'}
                 ]
-            }
+            },
+            {
+                text:"桌面系统",
+                activeMatch:`^/system/`,
+                items:[
+                    {text:'windows',link:'/system/windows'},
+                    {text:'macos',link:'/system/macos'},
+                    {text:'linux',link:'/system/linux'}
+                ]
+            },
         ],
         sidebar:{
             '/js/':[
@@ -37,17 +48,49 @@ export default defineConfig({
                         {text:'适配器模式',link:'/js/design/adapt',},
                     ]
 
+                },
+                {
+                    text:'问题总结',
+                    items:[
+                        {text: 'canvas',link: '/js/qa/canvas'},
+                        {text: 'wxjssdk',link: '/js/qa/wxjssdk'},
+                        {text: '小程序',link: '/js/qa/miniapp'},
+                    ]
                 }
+            ],
+            '/system/':[
+                {
+                    text:'windows',
+                    link:'/system/windows',
+                },
+                {
+                    text:'macos',
+                    link:'/system/macos',
+                },
+                {
+                    text:'linux',
+                    link:'/system/linux',
+                },
+
             ],
             '/':[
                 {text:'首页',link:'/'},
                 {text:'web前端',link:'/js/design/single'},
+                {text:'桌面系统',link:'/system/linux'},
             ]
         },
         search:{
             provider:'local'
         },
-        footer:{copyright:`© ${(new Date()).getFullYear()} xintang xiao. All rights reserved.`}
+        footer:{copyright:`© ${(new Date()).getFullYear()} xintang xiao. All rights reserved.`},
+        lastUpdated:{
+            text:'更新于'
+        },
+        editLink:{
+            pattern:'https://github.com/xiaoxintang/next-blog/edit/main/:path',
+            text:'在github上编辑此页面'
+        }
+
     },
     lastUpdated:true,
     markdown: {
@@ -57,6 +100,7 @@ export default defineConfig({
             dangerLabel: '危险',
             infoLabel: '信息',
             detailsLabel: '详细信息'
-        }
+        },
+
     }
 })
