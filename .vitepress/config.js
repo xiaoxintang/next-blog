@@ -39,7 +39,8 @@ export default defineConfig({
                     text: '基础知识',
                     items: [
                         {text: 'this指向', link: '/js/this'},
-                        {text: '高阶函数', link: '/js/higherOrderFunction'}
+                        {text: '高阶函数', link: '/js/higherOrderFunction'},
+                        {text: '原型', link: '/js/prototype'},
                     ]
                 },
                 {
