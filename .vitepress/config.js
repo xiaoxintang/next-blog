@@ -1,16 +1,16 @@
 import {defineConfig} from 'vitepress'
-
+import path from 'path'
 export default defineConfig({
     // ...
     title: 'longan的个人博客',
     description: "前端,web前端，vue,React,小程序，H5,taro,antd,ant design,docker,shell,linux",
-vite:{
-        resolve:{
-            alias:{
-                '@components':path.resolve(__dirname,'../components')
+    vite: {
+        resolve: {
+            alias: {
+                '@components': path.resolve(__dirname, '../components')
             }
         }
-},
+    },
     themeConfig: {
         nav: [
             {
@@ -68,8 +68,8 @@ vite:{
             '/css/': [
                 {
                     text: '基础知识', items: [
-                        {text:'BFC',link:'/css/bfc'},
-                        {text:'问题总结',link:'/css/qa'}
+                        {text: 'BFC', link: '/css/bfc'},
+                        {text: '问题总结', link: '/css/qa'}
                     ]
                 }
             ],
