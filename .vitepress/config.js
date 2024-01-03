@@ -24,6 +24,13 @@ export default defineConfig({
                 ]
             },
             {
+                text:'http',
+                activeMatch:'^/http/',
+                items:[
+                    {text: 'http缓存',link: '/http/cache'}
+                ]
+            },
+            {
                 text: "桌面系统",
                 activeMatch: `^/system/`,
                 items: [
@@ -88,6 +95,12 @@ export default defineConfig({
                     link: '/system/linux',
                 },
 
+            ],
+            '/http/':[
+                {
+                    text:'http缓存',
+                    link:'/http/cache'
+                }
             ],
             '/': [
                 {text: '首页', link: '/'},
