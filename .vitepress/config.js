@@ -27,7 +27,8 @@ export default defineConfig({
                 text:'http',
                 activeMatch:'^/http/',
                 items:[
-                    {text: 'http缓存',link: '/http/cache'}
+                    {text: 'http缓存',link: '/http/cache'},
+                    {text: 'http版本',link: '/http/version'},
                 ]
             },
             {
@@ -100,7 +101,12 @@ export default defineConfig({
                 {
                     text:'http缓存',
                     link:'/http/cache'
-                }
+                },
+                {
+                    text:'http版本',
+                    link:'/http/version'
+                },
+
             ],
             '/': [
                 {text: '首页', link: '/'},
