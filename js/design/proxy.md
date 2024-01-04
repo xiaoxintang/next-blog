@@ -2,7 +2,7 @@
 - **使用场景**
 1. 图片懒加载
 ```js
-function myImage(){
+const myImage = (function (){
     const imgNode = document.createElement('img')
     document.body.appendChild(imgNode);
     return{
@@ -10,8 +10,8 @@ function myImage(){
             imgNode.src = src
         }
     }
-}
-function proxyImage (){
+})()
+const proxyImage =(function (){
     const img = new Image()
     img.onload = function (){
         myImage.setSrc(this.src)
@@ -22,7 +22,9 @@ function proxyImage (){
             img.src = src
         }
     }
-}
+})()
+
+proxyImage.setSrc('图片真实需要展示的地址')
 ```
 2. 合并http请求
    例如页面交互是点击后立即请求后端接口，没有二次确认弹窗的这种交互。如：checkbox勾选用户的权限之类的
