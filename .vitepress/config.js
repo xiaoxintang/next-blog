@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress'
+import { defineConfig } from 'vitepress'
 import path from 'path'
 export default defineConfig({
     // ...
@@ -15,29 +15,33 @@ export default defineConfig({
         nav: [
             {
                 text: "web前端",
-                activeMatch: `^/(js|css|html)/`,
+                activeMatch: `^/(js|css|html|browser)/`,
                 items: [
-                    {text: 'js基础', link: '/js/this'},
-                    {text: 'js设计模式', link: '/js/design/single'},
-                    {text: 'css基础', link: '/css/bfc'},
-                    {text: '问题总结', link: '/js/qa/canvas'}
+                    { text: 'js基础', link: '/js/this' },
+                    { text: 'js设计模式', link: '/js/design/single' },
+                    { text: 'css基础', link: '/css/bfc' },
+                    { text: '浏览器事件循环', link: '/browser/eventloop' },
+                    {
+                        text: 'vue2源码', link: '/js/vue2/nextTick'
+                    },
+                    { text: '问题总结', link: '/js/qa/canvas' }
                 ]
             },
             {
-                text:'http',
-                activeMatch:'^/http/',
-                items:[
-                    {text: 'http缓存',link: '/http/cache'},
-                    {text: 'http版本',link: '/http/version'},
+                text: 'http',
+                activeMatch: '^/http/',
+                items: [
+                    { text: 'http缓存', link: '/http/cache' },
+                    { text: 'http版本', link: '/http/version' },
                 ]
             },
             {
                 text: "桌面系统",
                 activeMatch: `^/system/`,
                 items: [
-                    {text: 'windows', link: '/system/windows'},
-                    {text: 'macos', link: '/system/macos'},
-                    {text: 'linux', link: '/system/linux'}
+                    { text: 'windows', link: '/system/windows' },
+                    { text: 'macos', link: '/system/macos' },
+                    { text: 'linux', link: '/system/linux' }
                 ]
             },
         ],
@@ -46,39 +50,45 @@ export default defineConfig({
                 {
                     text: '基础知识',
                     items: [
-                        {text: 'this指向', link: '/js/this'},
-                        {text: '高阶函数', link: '/js/higherOrderFunction'},
-                        {text: '原型', link: '/js/prototype'},
+                        { text: 'this指向', link: '/js/this' },
+                        { text: '高阶函数', link: '/js/higherOrderFunction' },
+                        { text: '原型', link: '/js/prototype' },
                     ]
                 },
                 {
                     text: '设计模式',
                     items: [
-                        {text: '单例模式', link: '/js/design/single',},
-                        {text: '代理模式', link: '/js/design/proxy',},
-                        {text: '发布订阅模式', link: '/js/design/subscribe',},
-                        {text: '享元模式', link: '/js/design/share',},
-                        {text: '职责链模式', link: '/js/design/chain',},
-                        {text: '装饰器模式', link: '/js/design/decorate',},
-                        {text: '状态模式', link: '/js/design/status',},
-                        {text: '适配器模式', link: '/js/design/adapt',},
+                        { text: '单例模式', link: '/js/design/single', },
+                        { text: '代理模式', link: '/js/design/proxy', },
+                        { text: '发布订阅模式', link: '/js/design/subscribe', },
+                        { text: '享元模式', link: '/js/design/share', },
+                        { text: '职责链模式', link: '/js/design/chain', },
+                        { text: '装饰器模式', link: '/js/design/decorate', },
+                        { text: '状态模式', link: '/js/design/status', },
+                        { text: '适配器模式', link: '/js/design/adapt', },
                     ]
 
                 },
                 {
+                    text: 'vue2源码',
+                    items: [
+                        { text: 'nextTick', link: '/js/vue2/nextTick' }
+                    ],
+                },
+                {
                     text: '问题总结',
                     items: [
-                        {text: 'canvas', link: '/js/qa/canvas'},
-                        {text: 'wxjssdk', link: '/js/qa/wxjssdk'},
-                        {text: '小程序', link: '/js/qa/miniapp'},
+                        { text: 'canvas', link: '/js/qa/canvas' },
+                        { text: 'wxjssdk', link: '/js/qa/wxjssdk' },
+                        { text: '小程序', link: '/js/qa/miniapp' },
                     ]
                 }
             ],
             '/css/': [
                 {
                     text: '基础知识', items: [
-                        {text: 'BFC', link: '/css/bfc'},
-                        {text: '问题总结', link: '/css/qa'}
+                        { text: 'BFC', link: '/css/bfc' },
+                        { text: '问题总结', link: '/css/qa' }
                     ]
                 }
             ],
@@ -97,27 +107,27 @@ export default defineConfig({
                 },
 
             ],
-            '/http/':[
+            '/http/': [
                 {
-                    text:'http缓存',
-                    link:'/http/cache'
+                    text: 'http缓存',
+                    link: '/http/cache'
                 },
                 {
-                    text:'http版本',
-                    link:'/http/version'
+                    text: 'http版本',
+                    link: '/http/version'
                 },
 
             ],
             '/': [
-                {text: '首页', link: '/'},
-                {text: 'web前端', link: '/js/design/single'},
-                {text: '桌面系统', link: '/system/linux'},
+                { text: '首页', link: '/' },
+                { text: 'web前端', link: '/js/design/single' },
+                { text: '桌面系统', link: '/system/linux' },
             ]
         },
         search: {
             provider: 'local'
         },
-        footer: {copyright: `© ${(new Date()).getFullYear()} xintang xiao. All rights reserved.`},
+        footer: { copyright: `© ${(new Date()).getFullYear()} xintang xiao. All rights reserved.` },
         lastUpdated: {
             text: '更新于'
         },
