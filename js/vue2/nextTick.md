@@ -1,4 +1,4 @@
-## nextTick
+# nextTick
 
 [clone 源码地址](https://github.com/xiaoxintang/vue/blob/main/src/core/util/next-tick.ts)
 
