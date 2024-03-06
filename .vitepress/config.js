@@ -22,7 +22,7 @@ export default defineConfig({
                     { text: 'css基础', link: '/css/bfc' },
                     { text: '浏览器事件循环', link: '/browser/eventloop' },
                     {
-                        text: 'vue2源码', link: '/js/vue2/nextTick'
+                        text: 'vue2', link: '/js/vue2/'
                     },
                     { text: '问题总结', link: '/js/qa/canvas' }
                 ]
@@ -72,7 +72,11 @@ export default defineConfig({
                 {
                     text: 'vue2源码',
                     items: [
-                        { text: 'nextTick', link: '/js/vue2/nextTick' }
+                        { text: '响应式原理', link: '/js/vue2/' },
+                        { text: 'nextTick', link: '/js/vue2/nextTick' },
+                        { text: 'Observe', link: '/js/vue2/observe' },
+                        { text: 'Dep', link: '/js/vue2/dep' },
+                        { text: 'Watcher', link: '/js/vue2/watcher' },
                     ],
                 },
                 {
