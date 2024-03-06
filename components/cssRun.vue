@@ -23,7 +23,6 @@
   animation-name: run;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  //animation-fill-mode: both;
 }
 @keyframes  run {
   0%{

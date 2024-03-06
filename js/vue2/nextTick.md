@@ -1,4 +1,4 @@
-# nextTick
+# `nextTick` 方法
 
 [clone 源码地址](https://github.com/xiaoxintang/vue/blob/main/src/core/util/next-tick.ts)
 
@@ -14,7 +14,7 @@
 
 按照条件判断的优先级排列
 
-1. Promise
+1. `Promise`
 
 ```js
 const p = Promise.resolve();
@@ -38,7 +38,7 @@ timerFunc = () => {
 };
 ```
 
-3. setImmediate(非标准 api)
+3. `setImmediate`(非标准 api)
 
 ```js
 timerFunc = () => {
@@ -46,7 +46,7 @@ timerFunc = () => {
 };
 ```
 
-4. setTimeout 兜底方案
+4. `setTimeout` 兜底方案
 
 ```js
 timerFunc = () => {
@@ -56,7 +56,7 @@ timerFunc = () => {
 
 - **nextTick** 函数
 
-将传递的 callback 函数 push 进全局`callbacks`数组。调用已实现的`timerFunc`
+将传递的 `callback` 函数 push 进全局`callbacks`数组。调用已实现的`timerFunc`
 
 ```js
 export function nextTick(cb?: (...args: any[]) => any, ctx?: object) {
