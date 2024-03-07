@@ -16,6 +16,68 @@
 
 如果被`Observe`的对象不是数组，遍历对象的`key`并且`defineReactive`这个`key`
 
+## vue 对 arrayMethods 做了什么
+
+1. 以`Array.prototype`为原型创建`arrayMethods`对象
+2. 定义好需要打补丁的方法。
+
+```js
+const methodsToPatch = [
+  "push",
+  "pop",
+  "shift",
+  "unshift",
+  "splice",
+  "sort",
+  "reverse",
+];
+```
+
+3. 对每个方法用`Object.defineProperty`拦截，这里是封装了`def`方法
+
+```ts
+export function def(obj: Object, key: string, val: any, enumerable?: boolean) {
+  Object.defineProperty(obj, key, {
+    value: val,
+    enumerable: !!enumerable,
+    writable: true,
+    configurable: true,
+  });
+}
+```
+
+4. 调用原始方法。再手动调用通知方法`ob.dep.notify()`
+
+```ts
+methodsToPatch.forEach(function (method) {
+  // cache original method
+  const original = arrayProto[method];
+  def(arrayMethods, method, function mutator(...args) {
+    // 调用原始方法，获得结果
+    const result = original.apply(this, args);
+    // 获取之前的Observe实例
+    const ob = this.__ob__;
+    let inserted;
+    switch (method) {
+      case "push":
+      case "unshift":
+        inserted = args;
+        break;
+      case "splice":
+        inserted = args.slice(2);
+        break;
+    }
+    // 如果是插入，将插入的对象也转换为响应式对象
+    if (inserted) ob.observeArray(inserted);
+    // 省略dev逻辑
+    // 手动触发通知
+    ob.dep.notify();
+    // 将计算结果返回
+    return result;
+  });
+});
+```
+
 ## defineReactive 方法
 
 为每个被`defineReact`的`key`创建一个`Dep`.
