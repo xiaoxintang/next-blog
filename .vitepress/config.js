@@ -44,6 +44,14 @@ export default defineConfig({
                     { text: 'linux', link: '/system/linux' }
                 ]
             },
+            {
+                text: "工具",
+                activeMatch: `^/tools/`,
+                items: [
+                    { text: 'ja-netfilter', link: '/tools/java-netfilter' },
+                ]
+            },
+
         ],
         sidebar: {
             '/js/': [
@@ -121,6 +129,9 @@ export default defineConfig({
                     link: '/http/version'
                 },
 
+            ],
+            '/tools/': [
+                {text:'java-netfilter',link:'/tools/java-netfilter'}
             ],
             '/': [
                 { text: '首页', link: '/' },

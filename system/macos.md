@@ -24,22 +24,4 @@ ls -la /usr/local/lib/mode_modules
 sudo chown -R $(whoami) /usr/local/lib/mode_modules
 ```
 
-## webstrom vmoptions
 
-- **所在目录**
-
-```shell
-/Users/longan/Library/Application Support/JetBrains/WebStorm2023.3/webstorm.vmoptions
-```
-
-- **内容**
-
-```shell
-# custom WebStorm VM options (expand/override 'bin/webstorm.vmoptions')
-
-
--javaagent:/Users/longan/jetbra/ja-netfilter.jar=jetbrains
---add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
---add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
-
-```
