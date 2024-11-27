@@ -61,7 +61,7 @@ PREFIX,https://account.jetbrains.com.cn/lservice/rpc/validateKey.action
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
 ```
 - **相关插件**[github](https://github.com/mqj0712/plugin-sg-valid/releases)
-- **本地下载**[这里](./sgvalid.jar)
+- **本地下载**[这里](/sgvalid.jar)
 - **插件配置文件**`/Users/longan/jetbra/config-smartgit/sgvalid.conf`
 ```shell
 [Methods]
