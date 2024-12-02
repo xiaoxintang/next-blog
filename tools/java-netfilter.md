@@ -63,8 +63,13 @@ PREFIX,https://account.jetbrains.com.cn/lservice/rpc/validateKey.action
 - **相关插件**[github](https://github.com/mqj0712/plugin-sg-valid/releases)
 - **本地下载**[这里](/sgvalid.jar)
 - **插件配置文件**`/Users/longan/jetbra/config-smartgit/sgvalid.conf`
+- **激活文件**[压缩包](/smartgit.zip)
 ```shell
 [Methods]
 REGEXP,smartgit/.*|.*|\([^;]+;Ljava/security/MessageDigest;I\)V
 EQUAL,smartgit/Xt|a|(Lsmartgit/TO;Ljava/security/MessageDigest;I)V
 ```
+
+鸣谢
+
+> [zhile](https://zhile.io/2020/03/27/smartgit-license-crack.html)、[linux.do](https://linux.do/t/topic/43765/75)
