@@ -1,7 +1,7 @@
 # java-netfilter
 ## jetbrains家族使用方法
 
-- [zip](/jetbrain.zip) 可以用我修改好的。可以省去不少修改操作
+- [zip](/jetbra.zip) 可以用我修改好的。可以省去不少修改操作
 
 1. 下载 [jetbra.zip](https://jb.xiaoxt.online/)（激活码也在这链接里），我解压后的目录是 `~/jetbra`
 2. 编辑对应软件的`vmoptions`配置文件
